@@ -1,0 +1,26 @@
+.contNav {
+    height: 80px;
+    background: #0d1930;
+    padding: 0 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navTitle {
+    color: white;
+    font-weight: 700;
+
+}
+
+.navSearch {
+    width: 30%;
+    height: 28px;
+    padding-left: 40px;
+    border-radius: 15px;
+    font-size: 15.5px;
+
+    position: relative;
+    right: 60px;
+}

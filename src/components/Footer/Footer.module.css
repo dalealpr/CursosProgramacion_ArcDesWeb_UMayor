@@ -1,0 +1,45 @@
+.contFoot {
+    background: #1b1b1b;
+}
+
+.contSocial {
+    height: 60px;
+    background: #124a80;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.contFootC {
+    height: 240px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footUl {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footLink {
+    color: white;
+    font-size: 13px;
+}
+
+.contFootimg {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footFText {
+    font-size: 13px;
+    color: white;
+    text-align: center;
+}

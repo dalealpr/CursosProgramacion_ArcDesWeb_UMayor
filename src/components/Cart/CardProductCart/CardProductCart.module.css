@@ -1,0 +1,36 @@
+.contCardPCart {
+    width: 80%;
+    height: 150px;
+    border: 1px solid rgb(192, 192, 192);
+    padding: 20px 40px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.imgCPC {
+    width: 210px;
+    height: 120px;
+}
+
+.contetCPC {
+    width: 350px;
+}
+
+.priceCPC {
+    width: 120px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.btnCPC {
+    width: 120px;
+    height: 33px;
+
+    background: #124a80;
+    color: white;
+    border-radius: 9px;
+    shape-outside: none;
+    cursor: pointer;
+}
