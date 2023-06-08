@@ -17,24 +17,24 @@ function Footer() {
                 <a href="#">
                     <InstagramIcon style={{ color: "#cacaca" }}
                         sx={{
-                            height: '40px',
-                            width: '40px',
+                            height: '38px',
+                            width: '38px',
                         }}
                     />
                 </a>
                 <a href="#">
                     <FacebookIcon style={{ color: "#cacaca" }}
                         sx={{
-                            height: '40px',
-                            width: '40px',
+                            height: '38px',
+                            width: '38px',
                         }}
                     />
                 </a>
                 <a href="#">
                     <TwitterIcon style={{ color: "#d9d9d9" }}
                         sx={{
-                            height: '40px',
-                            width: '40px',
+                            height: '38px',
+                            width: '38px',
                         }}
                     />
                 </a>
@@ -54,7 +54,7 @@ function Footer() {
                 </div>
 
                 <p className={styles.footFText}>
-                    © 2023, Cursos, Inc.<br /> Cursos de Programaciony es marca comercial
+                    © 2023, Cursos, Inc.<br /> Cursos de Programacion es marca comercial
                     registrada de Cursos de programacion, Inc.
 
                 </p>

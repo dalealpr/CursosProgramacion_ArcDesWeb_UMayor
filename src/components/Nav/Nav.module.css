@@ -1,26 +1,306 @@
+/* Contenedor principal */
 .contNav {
-    height: 80px;
+    height: 70px;
     background: #0d1930;
     padding: 0 80px;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-.navTitle {
+/* Logo sitio web */
+.logoNav {
+    height: 44px;
+    width: 60px;
+    margin-right: 35px;
+}
+
+.titleNav {
     color: white;
-    font-weight: 700;
+    font-size: 15px;
+    margin-right: 85px;
+    display: block;
+}
+
+/* Links screen ordenador */
+.navUL {
+    height: 100%;
+    display: flex;
+    gap: 45px;
+
+    display: flex;
+    align-items: center;
+}
+
+.navLi {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.aNav {
+    height: 50%;
+    color: white;
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.aNav:hover {
+    border-bottom: 2px solid white;
 
 }
 
-.navSearch {
-    width: 30%;
-    height: 28px;
-    padding-left: 40px;
-    border-radius: 15px;
-    font-size: 15.5px;
+/* Contenedor elementos derecha */
+.cont2Nav {
+    width: 180px;
+    height: 100%;
 
-    position: relative;
-    right: 60px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 26px;
+}
+
+/* Buscador */
+.navSearch {
+    width: 38%;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 15px;
+    padding-left: 13px;
+    background: #182e57;
+    color: white;
+}
+
+.navSearch::placeholder {
+    color: white;
+}
+
+/* Login */
+.navLoginA {
+    border: 1px solid white;
+    padding: 6px 12px;
+    color: white;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+/* Menu hamburguesa screen smartphone */
+.contHambB {
+    display: none;
+}
+
+.contHambBX {
+    display: none;
+}
+
+/* Links  Menu hamburguesa screen smartphone  */
+.navULHX {
+    display: none;
+}
+
+/* MEDIA QUERYES */
+/* -------------- 10250 px -------------- */
+@media screen and (max-width: 1250px) {
+    .navUL {
+        display: none;
+    }
+
+    .contHambBX {
+        display: block;
+    }
+
+    .navULHX {
+        display: block;
+    }
+
+    .contHambB {
+        display: block;
+    }
+
+    .navBurg {
+        display: block;
+    }
+
+    /* NAV LINKS */
+    .navULHX {
+        width: 70%;
+        height: 192px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: rgb(26, 26, 26);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3px;
+    }
+
+    .navLiH {
+        height: 60px;
+        background: #182e57;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 3px;
+    }
+
+    .aNavH {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* -------------- 900 px -------------- */
+@media screen and (max-width: 900px) {
+    .contNav {
+        padding: 0 50px;
+    }
+
+    .aNavH {
+        font-weight: 500;
+        font-size: 17px;
+    }
+
+    .navSearchIc {
+        display: none;
+    }
+
+    .navSearch {
+        display: none;
+    }
+}
+
+/* -------------- 770 px -------------- */
+@media screen and (max-width: 770px) {
+
+    .contNav {
+        padding: 0 32px;
+        height: 60px;
+    }
+
+    .navULHX {
+        width: 70%;
+        height: 192px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgb(26, 26, 26);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3px;
+    }
+
+    .aNavH {
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    .logoNav {
+        height: 34px;
+        width: 45px;
+        margin-right: 20px;
+    }
+
+    .titleNav {
+        margin-right: 10px;
+        font-size: 13px;
+    }
+
+    .navCartIC {
+        display: flex;
+        align-items: center;
+    }
+
+    .navCartI {
+        width: 25px;
+        height: 25px;
+    }
+
+    .cont2Nav {
+        gap: 20px;
+    }
+
+    .navLoginA {
+        border: none;
+        padding: 0px 0px;
+        color: white;
+        font-size: 0px;
+        display: flex;
+        align-items: center;
+        font: 0/0 a;
+        text-shadow: transparent;
+        color: transparent;
+        text-decoration: none;
+    }
+}
+
+/* -------------- 600 px -------------- */
+@media screen and (max-width: 600px) {
+
+    .contNav {
+        padding-right: 10px;
+        height: 60px;
+        justify-content: space-between;
+    }
+
+    .cont2Nav {
+        width: 180px;
+        height: 100%;
+
+        display: flex;
+        flex: none;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 26px;
+    }
+
+    /* NAV LINKS */
+    .navULHX {
+        width: 100%;
+        height: 192px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgb(26, 26, 26);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3px;
+    }
+
+    .titleNav {
+        display: none;
+    }
+
+    .logoNav {
+        margin-left: 98%;
+    }
+}
+
+/* -------------- 480 px -------------- */
+@media screen and (max-width: 480px) {
+    .contNav {
+        padding-right: 10px;
+        height: 60px;
+    }
+
+    .cont2Nav {
+        gap: 10px;
+    }
+
 }

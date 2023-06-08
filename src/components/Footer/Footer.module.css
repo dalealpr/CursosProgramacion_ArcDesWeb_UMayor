@@ -1,7 +1,9 @@
+/* Contenedor Footer */
 .contFoot {
     background: #1b1b1b;
 }
 
+/* Redes sociales */
 .contSocial {
     height: 60px;
     background: #124a80;
@@ -21,6 +23,7 @@
     justify-content: center;
 }
 
+/* Enlaces */
 .footUl {
     display: flex;
     gap: 30px;
@@ -32,6 +35,7 @@
     font-size: 13px;
 }
 
+/* Imagenes store */
 .contFootimg {
     display: flex;
     gap: 30px;
@@ -42,4 +46,34 @@
     font-size: 13px;
     color: white;
     text-align: center;
+}
+
+/* MEDIA QUERYES */
+@media screen and (max-width: 770px) {
+    .contSocial {
+        height: 50px;
+        gap: 40px;
+    }
+
+    .contFootC {
+        height: 200px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .footUl {
+        display: none;
+    }
+
+    .footFText {
+        width: 80%;
+        font-size: 11px;
+        color: white;
+        text-align: center;
+    }
+
 }

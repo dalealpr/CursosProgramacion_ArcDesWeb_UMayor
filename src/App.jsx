@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import HomePage from './pages/HomePage/HomePage'
+import Nav from './components/Nav/Nav'
+import Footer from './components/Footer/Footer'
 
 
 function App() {
@@ -7,7 +9,9 @@ function App() {
 
   return (
     <div>
+      <Nav />
       <HomePage />
+      <Footer />
     </div>
   )
 }

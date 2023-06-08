@@ -8,11 +8,8 @@ import Cart from '../../components/Cart/Cart'
 function HomePage() {
     return (
         <div className=''>
-            <Nav />
 
             <Cart />
-
-            <Footer />
 
         </div>
     )
