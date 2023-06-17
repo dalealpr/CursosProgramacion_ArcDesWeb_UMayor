@@ -1,0 +1,31 @@
+.contProd {
+    border: 1px solid #c0c0c0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.prodTitle {
+    color: #1f86b6;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.prodImg {
+    margin-top: 20px;
+    width: 65%;
+}
+
+.prodPrice {
+    color: #1f86b6;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.medP {
+    font-size: 11px;
+    margin-bottom: 10px;
+}

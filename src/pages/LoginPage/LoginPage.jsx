@@ -4,7 +4,7 @@ import styles from './LoginPage.module.css'
 
 function LoginPage() {
     return (
-        <div className=''>LoginPage</div>
+        <div className={styles.contLogin}>LOGIN</div>
     )
 }
 

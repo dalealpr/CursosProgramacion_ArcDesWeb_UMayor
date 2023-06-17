@@ -1,5 +1,6 @@
 import { Container, InputAdornment, TextField } from "@mui/material";
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import styles from './Nav.module.css'
 import logoSitio from '../../assets/images/logo/logoWeb.png'
 //Iconos
@@ -51,7 +52,7 @@ function Nav() {
             {/* si show es true muestra: */}
             {show ? (
                 <>
-                    <a className={styles.contHambBX} onClick={mostrarNav} href="#">
+                    <a className={styles.contHambBX} onClick={mostrarNav} >
                         <CloseIcon className={styles.navBurgX} style={{ color: "White" }}
                             sx={{
                                 height: '38px',
@@ -62,16 +63,16 @@ function Nav() {
                     </a>
 
                     <ul className={styles.navULHX}>
-                        <li className={styles.navLiH}><a className={styles.aNavH} href="#"> CURSOS</a></li>
-                        <li className={styles.navLiH}><a className={styles.aNavH} href="#"> NOSOTROS</a></li>
-                        <li className={styles.navLiH}><a className={styles.aNavH} href="#"> CONTACTO</a></li>
+                        <li className={styles.navLiH}><Link className={styles.aNavH} to={"/"}> CURSOS</Link ></li>
+                        <li className={styles.navLiH}><Link className={styles.aNavH} to={"/nosotros"}> NOSOTROS</Link ></li>
+                        <li className={styles.navLiH}><Link className={styles.aNavH} to={"/contacto"}> CONTACTO</Link ></li>
                     </ul>
                 </>
             )
                 :
                 // Si show es false muestra:
                 (
-                    <a className={styles.contHambB} onClick={mostrarNav} href="#">
+                    <a className={styles.contHambB} onClick={mostrarNav} >
                         <MenuIcon className={styles.navBurg} style={{ color: "White" }}
                             sx={{
                                 height: '38px',
@@ -85,16 +86,16 @@ function Nav() {
             {/* ----------------------------------------------------------------------------------------------- */}
 
             {/* Logo */}
-            <a href="#"><img className={styles.logoNav} src={logoSitio} /></a>
+            <Link to={"/"}><img className={styles.logoNav} src={logoSitio} /></Link>
 
             {/* Titulo Nav */}
             <h2 className={styles.titleNav}>CURSOS DE <br /> PROGRAMACION</h2>
 
             {/* UL */}
             <ul className={styles.navUL}>
-                <li className={styles.navLi}><a className={styles.aNav} href="#"> CURSOS</a></li>
-                <li className={styles.navLi}><a className={styles.aNav} href="#"> NOSOTROS</a></li>
-                <li className={styles.navLi}><a className={styles.aNav} href="#"> CONTACTO</a></li>
+                <li className={styles.navLi}><Link className={styles.aNav} to={"/"}> CURSOS</Link ></li>
+                <li className={styles.navLi}><Link className={styles.aNav} to={"/nosotros"}> NOSOTROS</Link ></li>
+                <li className={styles.navLi}><Link className={styles.aNav} to={"/contacto"}> CONTACTO</Link ></li>
             </ul>
 
             {/* ----------------------------------------------------------------------------------------------- */}
@@ -106,58 +107,58 @@ function Nav() {
 
                     <input className={styles.navSearch} type="text" placeholder="Buscar..." />
 
-                    <a className={styles.navSearchIc} onClick={mostrarB} href="#">
+                    <Link className={styles.navSearchIc} onClick={mostrarB} href="#">
                         <CloseIcon style={{ color: "White" }}
                             sx={{
                                 height: '31px',
                                 width: '31px',
                             }}></CloseIcon>
-                    </a>
+                    </Link>
 
-                    <a className={styles.navCartIC} href="#">
+                    <Link className={styles.navCartIC} to={"/cart"}>
                         <ShoppingCartIcon style={{ color: "white" }}
                             sx={{
                                 height: '30px',
                                 width: '30px',
                             }} className={styles.navCartI} />
-                    </a>
+                    </Link>
 
-                    <a className={styles.navLoginA} href="#">
+                    <Link className={styles.navLoginA} to={"/login"}>
                         <AccountCircleIcon style={{ color: "white" }}
                             sx={{
                                 height: '28px',
                                 width: '28px',
                                 marginRight: '10px',
-                            }} />LOGIN</a>
+                            }} />LOGIN</Link>
 
                 </div>
             ) : (
                 // Si show es true muestra:
                 <div className={styles.cont2Nav}>
 
-                    <a className={styles.navSearchIc} onClick={mostrarB} href="#">
+                    <Link className={styles.navSearchIc} onClick={mostrarB} >
                         <SearchIcon style={{ color: "White" }}
                             sx={{
                                 height: '31px',
                                 width: '31px',
                             }}></SearchIcon>
-                    </a>
+                    </Link>
 
-                    <a className={styles.navCartIC} href="#">
+                    <Link className={styles.navCartIC} to={"/cart"}>
                         <ShoppingCartIcon style={{ color: "white" }}
                             sx={{
                                 height: '30px',
                                 width: '30px',
                             }} className={styles.navCartI} />
-                    </a>
+                    </Link>
 
-                    <a className={styles.navLoginA} href="#">
+                    <Link className={styles.navLoginA} to={"login"}>
                         <AccountCircleIcon style={{ color: "white" }}
                             sx={{
                                 height: '28px',
                                 width: '28px',
                                 marginRight: '10px',
-                            }} />LOGIN</a>
+                            }} />LOGIN</Link>
 
                 </div>
             )}
