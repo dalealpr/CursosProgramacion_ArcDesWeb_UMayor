@@ -1,4 +1,3 @@
-import { useState } from 'react'
 //Components
 import CartPage from './pages/CartPage/CartPage'
 import Nav from './components/Nav/Nav'
@@ -13,7 +12,6 @@ import LoginPage from './pages/LoginPage/LoginPage'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <DataProvider>
