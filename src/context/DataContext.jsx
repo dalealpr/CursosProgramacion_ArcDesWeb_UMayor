@@ -8,6 +8,7 @@ const DataProvider = ({ children }) => {
 
     //HOOKS
     const [data, setData] = useState([])
+    const [cart, setCart] = useState([])
 
     useEffect(() => {
         //GET Productos
@@ -15,7 +16,7 @@ const DataProvider = ({ children }) => {
     }, [])
 
     //-------------------------------------------------------//
-    return <dataContext.Provider value={{ data }}> {children} </dataContext.Provider>
+    return <dataContext.Provider value={{ data, cart, setCart }}> {children} </dataContext.Provider>
 }
 
 export default DataProvider;

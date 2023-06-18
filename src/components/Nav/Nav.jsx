@@ -107,13 +107,13 @@ function Nav() {
 
                     <input className={styles.navSearch} type="text" placeholder="Buscar..." />
 
-                    <Link className={styles.navSearchIc} onClick={mostrarB} href="#">
+                    <a className={styles.navSearchIc} onClick={mostrarB} href="#">
                         <CloseIcon style={{ color: "White" }}
                             sx={{
                                 height: '31px',
                                 width: '31px',
                             }}></CloseIcon>
-                    </Link>
+                    </a>
 
                     <Link className={styles.navCartIC} to={"/cart"}>
                         <ShoppingCartIcon style={{ color: "white" }}
@@ -136,13 +136,13 @@ function Nav() {
                 // Si show es true muestra:
                 <div className={styles.cont2Nav}>
 
-                    <Link className={styles.navSearchIc} onClick={mostrarB} >
+                    <a className={styles.navSearchIc} onClick={mostrarB} >
                         <SearchIcon style={{ color: "White" }}
                             sx={{
                                 height: '31px',
                                 width: '31px',
                             }}></SearchIcon>
-                    </Link>
+                    </a>
 
                     <Link className={styles.navCartIC} to={"/cart"}>
                         <ShoppingCartIcon style={{ color: "white" }}

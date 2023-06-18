@@ -1,0 +1,16 @@
+.contCartPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contCartElTot {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    width: 80%;
+}
+
+.cartPageTitle {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}

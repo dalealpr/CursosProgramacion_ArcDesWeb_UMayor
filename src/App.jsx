@@ -1,6 +1,6 @@
 import { useState } from 'react'
 //Components
-import Cart from './components/Cart/Cart'
+import CartPage from './pages/CartPage/CartPage'
 import Nav from './components/Nav/Nav'
 import Footer from './components/Footer/Footer'
 import DataProvider from './context/DataContext'
@@ -23,7 +23,7 @@ function App() {
         {/* Rutas */}
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/cart' element={<Cart />} />
+          <Route path='/cart' element={<CartPage />} />
           <Route path='/login' element={<LoginPage />} />
           <Route path='/nosotros' element={<NosotrosPage />} />
           <Route path='/contacto' element={<ContactoPage />} />

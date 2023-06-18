@@ -1,0 +1,24 @@
+.contCartEl {
+    margin-bottom: 40px;
+    border: 1px solid #c7c7c7;
+    padding: 20px 30px;
+    margin-right: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 14%;
+}
+
+.contTiImg {
+    width: 26%;
+}
+
+.cartETitle {}
+
+.cartEId {}
+
+.cartEImg {
+    width: 200px;
+}
+
+.cartEPrice {}
