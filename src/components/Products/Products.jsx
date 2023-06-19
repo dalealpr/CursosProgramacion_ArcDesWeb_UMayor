@@ -2,11 +2,15 @@ import { useContext } from 'react'
 import { dataContext } from '../../context/DataContext'
 import styles from './Products.module.css'
 import { Button } from '@mui/material'
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 
 function Products() {
 
+    //useContext
     const { data, cart, setCart } = useContext(dataContext)
+
+    //---------------------------------------------------------------------//
 
     // Funcion comprar producto
     const BuyProducts = (product) => {
@@ -15,7 +19,6 @@ function Products() {
         const productRepeat = cart.find((item) =>
             item.id == product.id
         )
-
         //Si el producto ya se encuentra en el carrito
         if (productRepeat) {
             setCart([...cart])
@@ -27,8 +30,7 @@ function Products() {
         }
     }
 
-
-
+    //---------------------------------------------------------------------//
     return data.map((product) => {
         return (
             <div className={styles.contProd} key={product.id}>
@@ -37,7 +39,9 @@ function Products() {
                 <img className={styles.prodImg} src={product.image} />
                 <p className={styles.prodPrice}>${product.price} USD</p>
                 <p className={styles.medP}>Cualquier medio de pago</p>
-                <Button variant="contained" onClick={() => BuyProducts(product)}>Agregar al carrito</Button>
+                <Button variant="contained" onClick={() => BuyProducts(product)} sx={{ fontSize: '13px' }}><AddShoppingCartIcon sx={{
+                    fontSize: '19px', marginRight: '5px'
+                }} />  Agregar al carrito</Button>
             </div>
         )
     })

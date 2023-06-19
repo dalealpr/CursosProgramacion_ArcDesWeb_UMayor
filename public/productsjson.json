@@ -3,48 +3,56 @@
         "id": 1001,
         "title": "Curso basico de HTML y CSS",
         "image": "https://i.ibb.co/RpzYmTY/curso01.jpg",
-        "price": 10
+        "price": 10,
+        "quanty": 1
     },
     {
         "id": 1002,
         "title": "Curso JavaScript Avanzado",
         "image": "https://i.ibb.co/kHKBhyw/curso02.jpg",
-        "price": 20
+        "price": 20,
+        "quanty": 1
     },
     {
         "id": 1003,
         "title": "Python basico e intermedio",
         "image": "https://i.ibb.co/60TqBFH/curso03.jpg",
-        "price": 20
+        "price": 20,
+        "quanty": 1
     },
     {
         "id": 1004,
         "title": "C# .NET",
         "image": "https://i.ibb.co/ZckdxvV/curso04.jpg",
-        "price": 20
+        "price": 20,
+        "quanty": 1
     },
     {
         "id": 1005,
         "title": "Curso BDD SQL",
         "image": "https://i.ibb.co/rMGmX83/curso05.jpg",
-        "price": 15
+        "price": 15,
+        "quanty": 1
     },
     {
         "id": 1006,
         "title": "Curso BDD PostgreSQL",
         "image": "https://i.ibb.co/yS5GqYN/curso06.jpg",
-        "price": 15
+        "price": 15,
+        "quanty": 1
     },
     {
         "id": 1007,
         "title": "Curso BDD MongoDB",
         "image": "https://i.ibb.co/mTrVP8C/curso07.jpg",
-        "price": 15
+        "price": 15,
+        "quanty": 1
     },
     {
         "id": 1008,
         "title": "Curso Basico AngularJS",
         "image": "https://i.ibb.co/Vv8x3Yy/curso08.jpg",
-        "price": 10
+        "price": 10,
+        "quanty": 1
     }
 ]

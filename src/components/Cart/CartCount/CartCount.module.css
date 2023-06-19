@@ -1,4 +1,7 @@
 .quantyC {
-    padding: 2px;
+    padding: 3px 6px;
     background-color: white;
+    font-weight: 700;
+    border-radius: 30px;
+    font-size: 14px;
 }
