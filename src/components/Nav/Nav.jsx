@@ -1,14 +1,16 @@
 import { Container, InputAdornment, TextField } from "@mui/material";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { Link } from "react-router-dom";
 import styles from './Nav.module.css'
 import logoSitio from '../../assets/images/logo/logoWeb.png'
+import { dataContext } from "../../context/DataContext";
 //Iconos
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import CartCount from "../Cart/CartCount/CartCount";
 
 
 
@@ -43,6 +45,9 @@ function Nav() {
     const mostrarNav = () => {
         setShow(!show)
     }
+
+    //Traigo el contenido del carrito
+    const { cart } = useContext(dataContext)
 
     return (
         <nav className={styles.contNav} ref={menuRef}>
@@ -116,6 +121,9 @@ function Nav() {
                     </a>
 
                     <Link className={styles.navCartIC} to={"/cart"}>
+                        {/* Si el carrito esta vacio no muestra contador */}
+                        {cart.length > 0 ? <CartCount /> : null}
+
                         <ShoppingCartIcon style={{ color: "white" }}
                             sx={{
                                 height: '30px',
@@ -145,6 +153,9 @@ function Nav() {
                     </a>
 
                     <Link className={styles.navCartIC} to={"/cart"}>
+                        {/* Si el carrito esta vacio no muestra contador */}
+                        {cart.length > 0 ? <CartCount /> : null}
+
                         <ShoppingCartIcon style={{ color: "white" }}
                             sx={{
                                 height: '30px',

@@ -10,10 +10,23 @@ function Products() {
 
     // Funcion comprar producto
     const BuyProducts = (product) => {
-        console.log(product)
-        //Agregar producto al carro
-        setCart([...cart, product])
+
+        //Buscar productos duplicados
+        const productRepeat = cart.find((item) =>
+            item.id == product.id
+        )
+
+        //Si el producto ya se encuentra en el carrito
+        if (productRepeat) {
+            setCart([...cart])
+            console.log("Error, el producto ya se encuentra en el carrito de compras")
+            //Si el producto no se encuentra en el carrito
+        } else {
+            console.log(product)
+            setCart([...cart, product])
+        }
     }
+
 
 
     return data.map((product) => {
