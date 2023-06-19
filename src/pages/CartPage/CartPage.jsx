@@ -1,10 +1,12 @@
 import React from 'react'
 import { useContext } from 'react'
 import { dataContext } from '../../context/DataContext'
+import { Link } from "react-router-dom";
 import styles from './CartPage.module.css'
 import CartElements from '../../components/Cart/CartElements/CartElements'
 import CartTotal from '../../components/Cart/CartTotal/CartTotal'
 import { SubtitlesOutlined } from '@mui/icons-material'
+import { Button } from '@mui/material'
 
 function CartPage() {
 
@@ -26,9 +28,10 @@ function CartPage() {
 
         </div>
     ) : (
-        <>
-            <p>El carrito de compras esta vacio</p>
-        </>
+        <div className={styles.contCVacio}>
+            <p className={styles.volverInP}>No hay productos agregados al carrito de compras</p>
+            <Link to={"/"}><Button variant="contained" sx={{ fontSize: '13px', width: '360px' }}>Volver al inicio</Button></Link>
+        </div>
 
     )
 }

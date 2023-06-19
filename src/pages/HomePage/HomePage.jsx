@@ -11,7 +11,7 @@ function HomePage() {
             <Carrusel />
 
             <section className={styles.sectListP}>
-                <h3 className={styles.prodTitle}>Productos</h3>
+                <h3 className={styles.prodTitle}>CURSOS</h3>
 
                 <div className={styles.contProdC}>
                     <div className={styles.contProdC2}>
