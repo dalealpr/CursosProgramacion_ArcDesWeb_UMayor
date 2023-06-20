@@ -5,6 +5,7 @@ import { db } from "../firebase/firebase.config";
 import { collection, getDocs } from 'firebase/firestore'
 
 
+
 export const dataContext = createContext()
 
 const DataProvider = ({ children }) => {
@@ -18,8 +19,12 @@ const DataProvider = ({ children }) => {
         axios("productsjson.json").then((res) => setData(res.data))
     }, [])
 
+
+
     //-------------------------------------------------------//
     return <dataContext.Provider value={{ data, cart, setCart }}> {children} </dataContext.Provider>
 }
 
+
 export default DataProvider;
+

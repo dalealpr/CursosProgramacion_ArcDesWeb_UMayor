@@ -6,6 +6,7 @@ import Products from '../../components/Products/Products'
 
 
 function HomePage() {
+
     return (
         <div className={styles.contHome}>
             <Carrusel />
