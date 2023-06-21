@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styles from './Nav.module.css'
 import logoSitio from '../../assets/images/logo/logoWeb.png'
 import { dataContext } from "../../context/DataContext";
+import { useAuth } from "../../context/DataContext";
 //Iconos
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from "@mui/icons-material/Search";
@@ -48,6 +49,8 @@ function Nav() {
 
     //Traigo el contenido del carrito
     const { cart } = useContext(dataContext)
+
+    const auth = useAuth()
 
     return (
         <nav className={styles.contNav} ref={menuRef}>
@@ -131,13 +134,23 @@ function Nav() {
                             }} className={styles.navCartI} />
                     </Link>
 
-                    <Link className={styles.navLoginA} to={"/login"}>
-                        <AccountCircleIcon style={{ color: "white" }}
-                            sx={{
-                                height: '28px',
-                                width: '28px',
-                                marginRight: '10px',
-                            }} />LOGIN</Link>
+                    {!auth.user ?
+                        (<Link className={styles.navLoginA} to={"/login"}>
+                            {/* Si el usuario esta logeado */}
+
+                            <AccountCircleIcon style={{ color: "white" }}
+                                sx={{
+                                    height: '28px',
+                                    width: '28px',
+                                    marginRight: '10px',
+                                }} />LOGIN</Link>) : (
+                            <Link className={styles.navLoginA} to={"/login"}>
+                                {/* Si el usuario esta logeado */}
+                                USUARIO<img className={styles.photoURL} src={auth.user.photoURL} referrerPolicy='no-referrer' />
+
+                            </Link>
+                        )}
+
 
                 </div>
             ) : (
@@ -163,13 +176,23 @@ function Nav() {
                             }} className={styles.navCartI} />
                     </Link>
 
-                    <Link className={styles.navLoginA} to={"login"}>
-                        <AccountCircleIcon style={{ color: "white" }}
-                            sx={{
-                                height: '28px',
-                                width: '28px',
-                                marginRight: '10px',
-                            }} />LOGIN</Link>
+
+                    {!auth.user ?
+                        (<Link className={styles.navLoginA} to={"/login"}>
+                            {/* Si el usuario esta logeado */}
+
+                            <AccountCircleIcon style={{ color: "white" }}
+                                sx={{
+                                    height: '28px',
+                                    width: '28px',
+                                    marginRight: '10px',
+                                }} />LOGIN</Link>) : (
+                            <Link className={styles.navLoginA} to={"/login"}>
+                                {/* Si el usuario esta logeado */}
+                                <img className={styles.photoURL} src={auth.user.photoURL} referrerPolicy='no-referrer' />
+
+                                USUARIO</Link>
+                        )}
 
                 </div>
             )}
