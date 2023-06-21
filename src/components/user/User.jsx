@@ -16,18 +16,20 @@ function User() {
 
     const handlerLogout = () => {
         auth.logout()
-        auth.setImgUser("")
     }
 
 
 
     return (
-        <div>
-            <img src={photoURL} referrerPolicy='no-referrer' />
-            <p>Nombre: {displayName}</p>
-            <p>Email: {email}</p>
-            <p>Telefono: {phoneNumber}</p>
-            <Button variant="contained" color="error" onClick={handlerLogout}>Cerrar sesion</Button>
+        <div className={styles.contUser}>
+            <img className={styles.imgUser} src={photoURL} referrerPolicy='no-referrer' />
+            <p className={styles.titleName}>Nombre:</p>
+            <p>{displayName}</p>
+            <p className={styles.titleEmail}>Email:</p>
+            <p>{email}</p>
+            <p className={styles.titleTel}>Telefono:</p>
+            <p>{phoneNumber}</p>
+            <Button sx={{ marginTop: '30px' }} variant="contained" color="error" onClick={handlerLogout}>Cerrar sesion</Button>
         </div>
     )
 }

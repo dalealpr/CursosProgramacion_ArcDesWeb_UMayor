@@ -1,13 +1,29 @@
 .contLogin {
+    height: 740px;
+
+    background: url('https://i.ibb.co/M21mL2S/546183.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.titleLog {
+    margin-bottom: 30px;
+    color: rgb(151, 151, 151)
+}
+
+.contUser {
     height: 600px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.titleLog {
-    margin-bottom: 30px;
-    color: rgb(151, 151, 151)
 }

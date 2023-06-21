@@ -59,15 +59,9 @@ const DataProvider = ({ children }) => {
     }
 
 
-    //DB FIREBASE CURSOS
-    useEffect(() => {
-        //GET Productos
-        axios("productsjson.json").then((res) => setData(res.data))
-    }, [])
-
 
     //-------------------------------------------------------//
-    return <dataContext.Provider value={{ data, cart, setCart, logout, loginWithGoogle, setCurrentState, user, imgUser }}> {children} </dataContext.Provider>
+    return <dataContext.Provider value={{ data, setData, cart, setCart, logout, loginWithGoogle, setCurrentState, user, imgUser }}> {children} </dataContext.Provider>
 }
 
 

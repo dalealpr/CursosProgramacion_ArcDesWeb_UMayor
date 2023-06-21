@@ -1,15 +1,28 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { dataContext } from '../../context/DataContext'
 import styles from './Products.module.css'
 import { Button } from '@mui/material'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { db } from '../../firebase/firebase.config';
+import { getDocs, collection } from "firebase/firestore";
 
 
 function Products() {
-
     //useContext
-    const { data, cart, setCart } = useContext(dataContext)
+    const { cart, setCart, data, setData } = useContext(dataContext)
 
+    const { detalleId } = useParams()
+
+    //Traer productos de DB Firebase
+    useEffect(() => {
+        const querydb = db
+        const queryCollection = collection(querydb, 'Cursos')
+        getDocs(queryCollection)
+            //Resultado
+            .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data() }))))
+
+    }, [])
     //---------------------------------------------------------------------//
 
     // Funcion comprar producto
