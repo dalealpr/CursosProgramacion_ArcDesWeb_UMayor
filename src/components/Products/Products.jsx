@@ -6,6 +6,7 @@ import { Button } from '@mui/material'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { db } from '../../firebase/firebase.config';
 import { getDocs, collection } from "firebase/firestore";
+import Swal from 'sweetalert2'
 
 
 function Products() {
@@ -36,10 +37,23 @@ function Products() {
         if (productRepeat) {
             setCart([...cart])
             console.log("Error, el producto ya se encuentra en el carrito de compras")
+            //Alerta
+            Swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: 'El Curso ya se encuentra en el carrito de compras',
+            })
             //Si el producto no se encuentra en el carrito
         } else {
             console.log(product)
             setCart([...cart, product])
+            //Ale
+            Swal.fire({
+                icon: 'success',
+                title: 'Curso agregado al carrito',
+                showConfirmButton: false,
+                timer: 1500
+            })
         }
     }
 
