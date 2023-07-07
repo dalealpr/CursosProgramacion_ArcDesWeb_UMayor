@@ -8,7 +8,9 @@ import carouseljson from '../../helper/carouseljson.json'
 function Carrusel() {
 
     return (
-        <Carousel>
+        <Carousel sx={{
+            display: 'block'
+        }}>
             {
                 carouseljson.map(item => <CarruselItem key={item.id} item={item} />)
             }

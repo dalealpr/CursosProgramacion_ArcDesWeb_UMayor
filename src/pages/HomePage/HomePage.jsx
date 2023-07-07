@@ -9,7 +9,9 @@ function HomePage() {
 
     return (
         <div className={styles.contHome}>
-            <Carrusel />
+            <div className={styles.contCarrusel}>
+                <Carrusel />
+            </div>
 
             <section className={styles.sectListP}>
                 <h3 className={styles.prodTitle}>CURSOS</h3>

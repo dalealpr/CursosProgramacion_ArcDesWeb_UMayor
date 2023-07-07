@@ -58,8 +58,6 @@ const DataProvider = ({ children }) => {
         const res = await signOut(auth)
     }
 
-
-
     //-------------------------------------------------------//
     return <dataContext.Provider value={{ data, setData, cart, setCart, logout, loginWithGoogle, setCurrentState, user, imgUser }}> {children} </dataContext.Provider>
 }

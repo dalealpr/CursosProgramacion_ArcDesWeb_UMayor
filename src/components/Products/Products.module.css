@@ -1,5 +1,6 @@
 .contProd {
     border: 1px solid #c0c0c0;
+    padding: 20px;
 
     display: flex;
     flex-direction: column;
@@ -9,6 +10,7 @@
 
 .prodTitle {
     color: #1f86b6;
+    text-align: center;
     font-size: 21px;
     margin-bottom: 12px;
 }
@@ -28,4 +30,28 @@
 .medP {
     font-size: 11px;
     margin-bottom: 10px;
+}
+
+/* MEDIA QUERYES */
+/* -------------- 1450 px -------------- */
+@media screen and (max-width: 1450px) {
+    .prodTitle {
+        font-size: 19px;
+        margin-bottom: 12px;
+    }
+
+    .prodPrice {
+        font-size: 21px;
+    }
+}
+
+/* -------------- 900 px -------------- */
+@media screen and (max-width: 900px) {}
+
+/* -------------- 600 px -------------- */
+@media screen and (max-width: 600px) {
+    .prodImg {
+        margin-top: 20px;
+        width: 58%;
+    }
 }

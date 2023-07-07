@@ -4,3 +4,31 @@
     font-size: 30px;
     margin-left: 90px;
 }
+
+/* -------------- 900 px -------------- */
+@media screen and (max-width: 900px) {
+    .contCarrus {
+        height: 400px;
+    }
+
+    .CTitle {
+        margin-bottom: 150px;
+        font-size: 28px;
+        text-align: center;
+        margin-left: 90px;
+    }
+
+}
+
+/* -------------- 900 px -------------- */
+@media screen and (max-width: 600px) {
+    .contCarrus {
+        height: 270px;
+    }
+
+    .CTitle {
+        margin-bottom: 250px;
+        font-size: 22px;
+        margin-left: 20px;
+    }
+}

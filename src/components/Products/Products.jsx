@@ -66,9 +66,14 @@ function Products() {
                 <img className={styles.prodImg} src={product.image} />
                 <p className={styles.prodPrice}>${product.price} USD</p>
                 <p className={styles.medP}>Cualquier medio de pago</p>
-                <Button variant="contained" onClick={() => BuyProducts(product)} sx={{ fontSize: '13px' }}><AddShoppingCartIcon sx={{
+                <Button variant="contained" onClick={() => BuyProducts(product)}
+                    sx={{
+                        width: "70%",
+                        fontSize: '13px'
+                    }}
+                ><AddShoppingCartIcon sx={{
                     fontSize: '19px', marginRight: '5px'
-                }} />  Agregar al carrito</Button>
+                }} />  Agregar</Button>
             </div>
         )
     })
