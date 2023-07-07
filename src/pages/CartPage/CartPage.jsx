@@ -30,7 +30,7 @@ function CartPage() {
     ) : (
         <div className={styles.contCVacio}>
             <p className={styles.volverInP}>No hay productos agregados al carrito de compras</p>
-            <Link to={"/"}><Button variant="contained" sx={{ fontSize: '13px', width: '360px' }}>Volver al inicio</Button></Link>
+            <Link to={"/"}><Button variant="contained" sx={{ fontSize: '13px', width: '300px' }}>Volver al inicio</Button></Link>
         </div>
 
     )
