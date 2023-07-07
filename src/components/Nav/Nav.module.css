@@ -174,7 +174,10 @@
 /* -------------- 900 px -------------- */
 @media screen and (max-width: 900px) {
     .contNav {
+        width: 90%;
         padding: 0 50px;
+        position: fixed;
+        z-index: 100;
     }
 
     .aNavH {
@@ -192,9 +195,10 @@
 }
 
 /* -------------- 770 px -------------- */
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 790px) {
 
     .contNav {
+        width: 92%;
         padding: 0 32px;
         height: 60px;
     }
@@ -260,6 +264,7 @@
 @media screen and (max-width: 600px) {
 
     .contNav {
+        width: 92.8%;
         padding-right: 10px;
         height: 60px;
         justify-content: space-between;
@@ -297,6 +302,23 @@
     .logoNav {
         margin-left: 98%;
     }
+
+    .navLoginA {
+        margin-right: 10px;
+        border: none;
+        padding: 0px 0px;
+        color: white;
+        font-size: 0px;
+        display: flex;
+
+        align-items: center;
+        font: 0/0 a;
+        text-shadow: transparent;
+        color: transparent;
+        text-decoration: none;
+    }
+
+
 }
 
 /* -------------- 480 px -------------- */
@@ -308,6 +330,21 @@
 
     .cont2Nav {
         gap: 10px;
+    }
+
+    .navLoginA {
+        margin-right: 18px;
+        border: none;
+        padding: 0px 0px;
+        color: white;
+        font-size: 0px;
+        display: flex;
+
+        align-items: center;
+        font: 0/0 a;
+        text-shadow: transparent;
+        color: transparent;
+        text-decoration: none;
     }
 
 }

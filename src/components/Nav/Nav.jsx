@@ -47,6 +47,12 @@ function Nav() {
         setShow(!show)
     }
 
+    const mostrarNav2 = () => {
+        setTimeout(() => {
+            setShow(!show)
+        }, 100);
+    }
+
     //Traigo el contenido del carrito
     const { cart } = useContext(dataContext)
 
@@ -71,9 +77,9 @@ function Nav() {
                     </a>
 
                     <ul className={styles.navULHX}>
-                        <li className={styles.navLiH}><Link className={styles.aNavH} to={"/"}> CURSOS</Link ></li>
-                        <li className={styles.navLiH}><Link className={styles.aNavH} to={"/nosotros"}> NOSOTROS</Link ></li>
-                        <li className={styles.navLiH}><Link className={styles.aNavH} to={"/contacto"}> CONTACTO</Link ></li>
+                        <li className={styles.navLiH}><Link className={styles.aNavH} to={"/"} onClick={mostrarNav2}> CURSOS</Link ></li>
+                        <li className={styles.navLiH}><Link className={styles.aNavH} to={"/nosotros"} onClick={mostrarNav2}> NOSOTROS</Link ></li>
+                        <li className={styles.navLiH}><Link className={styles.aNavH} to={"/contacto"} onClick={mostrarNav2}> CONTACTO</Link ></li>
                     </ul>
                 </>
             )
@@ -185,7 +191,7 @@ function Nav() {
                                 sx={{
                                     height: '28px',
                                     width: '28px',
-                                    marginRight: '10px',
+                                    marginRight: '12px',
                                 }} />LOGIN</Link>) : (
                             <Link className={styles.navLoginA} to={"/login"}>
                                 {/* Si el usuario esta logeado */}
