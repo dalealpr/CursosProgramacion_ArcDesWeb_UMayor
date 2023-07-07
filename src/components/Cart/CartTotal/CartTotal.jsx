@@ -19,7 +19,7 @@ function CartTotal() {
             <h3 className={styles.titlecTotal}>Total  a pagar</h3>
             <p className={styles.pricecTotal}>${total}</p>
             <Button variant="contained" sx={{ fontSize: '13px', width: '68%', marginBottom: '20px' }}>PAGAR</Button>
-            <Link className={styles.linkSC} to={"/"}><Button variant="outlined" sx={{ fontSize: '13px', width: '300px' }}>SEGUIR COMPRANDO</Button></Link>
+            <Link className={styles.linkSC} to={"/"}><Button variant="outlined" sx={{ fontSize: '13px', width: '99%' }}>SEGUIR COMPRANDO</Button></Link>
             <p className={styles.mPago}>Medios de pago</p>
             <img className={styles.imgWp} src="https://i.ibb.co/GQC5RWC/webpay.png" />
         </div>

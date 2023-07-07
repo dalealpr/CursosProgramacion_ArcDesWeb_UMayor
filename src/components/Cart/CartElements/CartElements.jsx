@@ -37,7 +37,7 @@ function CartElements() {
 
                 <p className={styles.cartEId}><b>ID: </b>{product.id}</p>
                 <p className={styles.cartEPrice}>${product.price} USD</p>
-                <Button onClick={() => DeleteProduct(product.id)} variant="contained" color="error" sx={{ fontSize: '11px' }}><DeleteIcon />Eliminar</Button>
+                <Button onClick={() => DeleteProduct(product.id)} variant="contained" color="error" sx={{ fontSize: '11px', width: '150px' }}><DeleteIcon />Eliminar</Button>
             </div>
         )
     })

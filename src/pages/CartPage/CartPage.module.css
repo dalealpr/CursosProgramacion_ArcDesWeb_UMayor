@@ -28,3 +28,13 @@
     font-size: 18px;
     font-weight: 700;
 }
+
+/* MEDIA QUERYES */
+/* -------------- 10250 px -------------- */
+@media screen and (max-width: 1300px) {
+    .contCartElTot {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+    }
+}
